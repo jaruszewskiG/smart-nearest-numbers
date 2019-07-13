@@ -1,0 +1,22 @@
+{
+  "name": "smart-nearest-numbers",
+  "version": "0.1.0",
+  "description": "Finds nearest integer numbers to the given number. Has option to exclude numbers that are intended to be omitted from finding.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaruszewskiG/smart-nearest-numbers.git"
+  },
+  "author": "Grzegorz Jaruszewski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaruszewskiG/smart-nearest-numbers/issues"
+  },
+  "homepage": "https://github.com/jaruszewskiG/smart-nearest-numbers#readme",
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  }
+}
