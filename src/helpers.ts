@@ -4,7 +4,7 @@ export function deepCopy(object: any) {
 
 export function handleFloatNumbers(number: number) {
   if (!Number.isInteger(number)) {
-    let roundedNumber = Math.round(number);
+    const roundedNumber = Math.round(number);
     let isRoundedNumberHigher = true;
     if (roundedNumber < number) {
       isRoundedNumberHigher = false;
