@@ -1,4 +1,4 @@
-import { deepCopy } from './helpers';
+import { deepCopy, handleFloatNumbers } from './helpers';
 
 export function nearestNumbers(number: number, excludedNumbers: Array<number>, min: number, max: number) {
   const initialNumber = deepCopy(number);
@@ -8,6 +8,18 @@ export function nearestNumbers(number: number, excludedNumbers: Array<number>, m
   let canBeLower = true;
   let canBeHigher = true;
   let lastActionNumberIncreased = false;
+
+  const handleFloatNumbersResult = handleFloatNumbers(number);
+  if (handleFloatNumbersResult) {
+    number = handleFloatNumbersResult.roundedNumber;
+    if (handleFloatNumbersResult.isRoundedNumberHigher) {
+      higherNumber = number;
+      lowerNumber = number - 1;
+    } else {
+      higherNumber = number + 1;
+      lowerNumber = number;
+    }
+  }
 
   // Repeat until we find the number is not in array and until number can be increased or decreased
   while (excludedNumbers.includes(number) && (canBeLower || canBeHigher)) {
